@@ -1,0 +1,29 @@
+version: '3'
+services:
+  informix-server:
+      #image: "ibmcom/informix-developer-database"
+      image: "informix-developer-edition"
+      container_name: "server"
+      hostname: "server"
+      environment:
+          LICENSE: 'accept'
+          SIZE:    'small'
+      ports:
+         - 27018:27018
+         - 9088:9088
+      volumes:
+         - ${PWD}/informix-server:/opt/ibm/files
+  informix-client:
+      #image: "ibmcom/informix-developer-sandbox"
+      image: "informix-developer-sandbox"
+      container_name: "client"
+      hostname: "client"
+      environment:
+          LICENSE: 'accept'
+      ports:
+         - 9001:9001
+      volumes:
+         - ${PWD}/informix-server:/home/informix/files
+
+
+
