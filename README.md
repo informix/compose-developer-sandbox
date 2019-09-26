@@ -1,23 +1,31 @@
 # compose-developer-sandbox
 
+## Default compose file:
+    docker-compose.yml
+
+## Full Documentation
+1.  See __doc__ folder.
+
+## Quickstart Steps
+
 ### Pre-requisites
     1.  docker
     2.  docker-compose
 
-### Instructions
-    1.  cd to directory containing repo
-    2.  docker-compose up -d
+### Start docker compose 
+1.  cd to project directory 
+2.  Run __chmod -R 777 *__ 
+3.  Run __docker-compose up__ 
 
 ### Connect to Informix server Container
-    - docker exec -it server bash
+1.  docker exec -it server bash
 
 ### Connect to Informix client Container
-    - docker exec -it client bash
+1. docker exec -it client bash
 
-### Development Examples/Samples
 
-### Bring down the Sandbox
-    1.  cd to directory containing repo
-    2.  docker-compose down -v
+### Stop and remove Contianers & volume 
+1.  cd to project directory 
+2.  docker-compose down -v
 
 
