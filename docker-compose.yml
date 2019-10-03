@@ -8,6 +8,7 @@ services:
       environment:
           LICENSE: 'accept'
           SIZE:    'small'
+          RUN_FILE_PRE_INIT: pre_setup.sh
       ports:
          - 27018:27018
          - 9088:9088
