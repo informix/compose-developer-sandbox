@@ -1,8 +1,7 @@
 version: '3'
 services:
   informix-server:
-      #image: "ibmcom/informix-developer-database"
-      image: "informix-developer-edition"
+      image: "ibmcom/informix-developer-database"
       container_name: "server"
       hostname: "server"
       environment:
@@ -15,8 +14,7 @@ services:
       volumes:
          - ${PWD}/informix-server:/opt/ibm/files
   informix-client:
-      #image: "ibmcom/informix-developer-sandbox"
-      image: "informix-developer-sandbox"
+      image: "ibmcom/informix-developer-sandbox"
       container_name: "client"
       hostname: "client"
       environment:
